@@ -31,4 +31,10 @@ I used Visual Studio 2019 Community Edition.
 project files can get out of date, specifically when files are
 added/deleted. Usually, this can be easily fixed by examining the
 errors when compiling.
-  * Differences from openssl1_1: My philosophy was to create a project that would deliver just the VS solution/project files and allow people to fetch from github the version of openssl that they wanted to compile (and keep that up-to-date) separately. Kelvin delivers both the openssl code and the project files as a package. I use references (including to zlib) and to the internally generated libraries instead of specifying them in the input area of linking. I also simplified his project a great deal to remove what I didn't need (for e.g. supporting older versions of Visual Studio, DLL builds etc.). I use static libraries compiled with CRT DLL runtime. All other targets were deleted to keep the project simple. I do want to acknowledge the beautiful framework that Kelvin has created to compile openssl natively in all the formats that one can imagine.
+  * Differences from openssl1_1: 
+      * My philosophy was to create a project that would deliver just the VS solution/project files and allow people to fetch from github the version of openssl that they wanted to compile (and keep that up-to-date) separately. 
+      * Kelvin delivers both the openssl code and the project files as a package.
+      * I use references (including to zlib) and to the internally generated libraries instead of specifying them in the input area of linking. 
+      * I also simplified his project a great deal to remove what I didn't need (for e.g. supporting older versions of Visual Studio, DLL builds etc.).
+      * I use static libraries compiled with CRT DLL runtime. All other targets were deleted to keep the project simple.
+      * I do want to acknowledge the beautiful framework that Kelvin has created to compile openssl natively in all the formats that one can imagine.
