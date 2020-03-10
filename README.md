@@ -11,7 +11,7 @@ being able to recompile upon demand etc.
 # Compiling #
 This project provides native Visual Studio solution/project files that
 can be used to compile openssl on Windows. This was heavily based on
-work done [Kelvin Lee](https://github.com/kiyolee) found at
+work done by [Kelvin Lee](https://github.com/kiyolee) found at
 [openssl1_1](https://github.com/kiyolee/openssl1_1-win-build).
 
 I used Visual Studio 2019 Community Edition.
