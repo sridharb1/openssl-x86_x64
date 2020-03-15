@@ -353,5 +353,20 @@
     <CopyFileToFolders Include="dso_conf.h">
       <Filter>Header Files</Filter>
     </CopyFileToFolders>
+    <CopyFileToFolders Include="bn_conf.x86.h">
+      <Filter>Header Files</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="opensslconf.x64.h">
+      <Filter>Header Files</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="opensslconf.x86.h">
+      <Filter>Header Files</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="buildinf.x64.h">
+      <Filter>Header Files</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="buildinf.x86.h">
+      <Filter>Header Files</Filter>
+    </CopyFileToFolders>
   </ItemGroup>
 </Project>
