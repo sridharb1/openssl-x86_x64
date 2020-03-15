@@ -21,7 +21,7 @@ I used Visual Studio 2019 Community Edition.
   * git clone [OpenSSL, tested w/ v1.1.1e-DEV](https://github.com/openssl/openssl) into a local folder. I switched the branch to the latest in the v1.1.1 branch.
   * git clone [openssl-x86_x64](https://github.com/sridharb1/openssl-x86_x64) into another folder. 
   * Copy the contents of the build folder of openssl-x86_x64 into the openssl tree.
-  * This depends on the statically compiled [zlib](https://github.com/madler/zlib). zlib has excellent support for Visual Studio and native solution/project files can be found in the zlib\contrib\vstudio\vc14 folder. I use the zlibstat project in my compilation of openssl. I put the zlib folder at the same level as my openssl folder.
+  * This depends on the statically compiled [zlib, tested w/ v1.2.11](https://github.com/madler/zlib). zlib has excellent support for Visual Studio and native solution/project files can be found in the zlib\contrib\vstudio\vc14 folder. I use the zlibstat project in my compilation of openssl. I put the zlib folder at the same level as my openssl folder.
   * Open the openssl1_1.sln in Visual Studio. Select the platform/configuration (like
     x64/Release) and compile.
     
