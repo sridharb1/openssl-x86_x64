@@ -24,7 +24,18 @@ I used Visual Studio 2019 Community Edition.
   * This depends on the statically compiled [zlib, tested w/ v1.2.11](https://github.com/madler/zlib). zlib has excellent support for Visual Studio and native solution/project files can be found in the zlib\contrib\vstudio\vc14 folder. I use the zlibstat project in my compilation of openssl. I put the zlib folder at the same level as my openssl folder.
   * Open the openssl1_1.sln in Visual Studio. Select the platform/configuration (like
     x64/Release) and compile.
-    
+  * `openssl version -a`
+    ``` shell
+    OpenSSL 1.1.1e-dev  xx XXX xxxx
+built on: Mon Mar  9 13:34:30 2020 UTC
+platform: VC-WIN64A
+options:  bn(64,64) rc4(16x,int) des(long) idea(int) blowfish(ptr)
+compiler: cl /Zi /Fdossl_static.pdb /MT /Zl /Gs0 /GF /Gy /W3 /wd4090 /nologo /O2 -DL_ENDIAN -DOPENSSL_PIC -DOPENSSL_CPUID_OBJ -DOPENSSL_IA32_SSE2 -DOPENSSL_BN_ASM_MONT -DOPENSSL_BN_ASM_MONT5 -DOPENSSL_BN_ASM_GF2m -DSHA1_ASM -DSHA256_ASM -DSHA512_ASM -DKECCAK1600_ASM -DRC4_ASM -DMD5_ASM -DAESNI_ASM -DVPAES_ASM -DGHASH_ASM -DECP_NISTZ256_ASM -DX25519_ASM -DPOLY1305_ASM
+OPENSSLDIR: "C:\Program Files\Common Files\SSL"
+ENGINESDIR: "C:\Program Files\OpenSSL-1_1\lib\engines-1_1"
+Seeding source: os-specific
+    ```
+
 ## Note ##
 
   * As the original project evolves, there is a possibility that these
