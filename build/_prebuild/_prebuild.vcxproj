@@ -52,6 +52,7 @@ popd</Command>
       <DestinationFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">bn_conf.h</DestinationFileName>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <TreatOutputAsContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</TreatOutputAsContent>
     </CopyFileToFolders>
     <CopyFileToFolders Include="bn_conf.x86.h">
       <DestinationFolders Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\include\crypto</DestinationFolders>
@@ -60,6 +61,7 @@ popd</Command>
       <DestinationFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">bn_conf.h</DestinationFileName>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <TreatOutputAsContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</TreatOutputAsContent>
     </CopyFileToFolders>
     <CopyFileToFolders Include="opensslconf.x64.h">
       <DestinationFolders Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\include\openssl</DestinationFolders>
@@ -68,6 +70,7 @@ popd</Command>
       <DestinationFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">opensslconf.h</DestinationFileName>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <TreatOutputAsContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</TreatOutputAsContent>
     </CopyFileToFolders>
     <CopyFileToFolders Include="opensslconf.x86.h">
       <DestinationFolders Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\include\openssl</DestinationFolders>
@@ -76,6 +79,7 @@ popd</Command>
       <DestinationFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">opensslconf.h</DestinationFileName>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <TreatOutputAsContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</TreatOutputAsContent>
     </CopyFileToFolders>
     <CopyFileToFolders Include="buildinf.x64.h">
       <DestinationFolders Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\crypto</DestinationFolders>
@@ -84,6 +88,7 @@ popd</Command>
       <DestinationFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">buildinf.h</DestinationFileName>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <TreatOutputAsContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</TreatOutputAsContent>
     </CopyFileToFolders>
     <CopyFileToFolders Include="buildinf.x86.h">
       <DestinationFolders Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\crypto</DestinationFolders>
@@ -92,9 +97,11 @@ popd</Command>
       <DestinationFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">buildinf.h</DestinationFileName>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <TreatOutputAsContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</TreatOutputAsContent>
     </CopyFileToFolders>
     <CopyFileToFolders Include="dso_conf.h">
       <DestinationFolders>..\..\include\crypto</DestinationFolders>
+      <TreatOutputAsContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</TreatOutputAsContent>
     </CopyFileToFolders>
     <CopyFileToFolders Include="..\..\include\openssl\aes.h">
       <DestinationFolders Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OutDir)include\openssl</DestinationFolders>
