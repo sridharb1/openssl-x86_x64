@@ -18,7 +18,7 @@ I used Visual Studio 2019 Community Edition.
 
 # Installation #
 
-  * git clone [OpenSSL, tested w/ v1.1.1e-DEV](https://github.com/openssl/openssl) into a local folder. I switched the branch to the latest in the v1.1.1 branch.
+  * git clone [OpenSSL, tested w/ v1.1.1g-DEV](https://github.com/openssl/openssl) into a local folder. I switched the branch to the latest in the v1.1.1 branch.
   * git clone [openssl-x86_x64](https://github.com/sridharb1/openssl-x86_x64) into another folder. 
   * Copy the contents of the build folder of openssl-x86_x64 into the openssl tree.
   * This depends on the statically compiled [zlib, tested w/ v1.2.11](https://github.com/madler/zlib).
