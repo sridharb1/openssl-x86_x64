@@ -28,23 +28,30 @@ I used Visual Studio 2019 Community Edition.
     x64/Release) and compile.
   * `openssl version -a`
     ``` shell
-    OpenSSL 1.1.1e-dev  xx XXX xxxx
-built on: Mon Mar  9 13:34:30 2020 UTC
-platform: VC-WIN64A
-options:  bn(64,64) rc4(16x,int) des(long) idea(int) blowfish(ptr)
-compiler: cl /Zi /Fdossl_static.pdb /MT /Zl /Gs0 /GF /Gy /W3 /wd4090 /nologo /O2 -DL_ENDIAN -DOPENSSL_PIC -DOPENSSL_CPUID_OBJ -DOPENSSL_IA32_SSE2 -DOPENSSL_BN_ASM_MONT -DOPENSSL_BN_ASM_MONT5 -DOPENSSL_BN_ASM_GF2m -DSHA1_ASM -DSHA256_ASM -DSHA512_ASM -DKECCAK1600_ASM -DRC4_ASM -DMD5_ASM -DAESNI_ASM -DVPAES_ASM -DGHASH_ASM -DECP_NISTZ256_ASM -DX25519_ASM -DPOLY1305_ASM
-OPENSSLDIR: "C:\Program Files\Common Files\SSL"
-ENGINESDIR: "C:\Program Files\OpenSSL-1_1\lib\engines-1_1"
-Seeding source: os-specific
+    OpenSSL 1.1.1g-dev  xx XXX xxxx
+    built on: Mon Mar  9 13:34:30 2020 UTC
+    platform: VC-WIN64A
+    options:  bn(64,64) rc4(16x,int) des(long) idea(int) blowfish(ptr)
+    compiler: cl /Zi /Fdossl_static.pdb /MT /Zl /Gs0 /GF /Gy /W3 /wd4090 /nologo /O2 -DL_ENDIAN -DOPENSSL_PIC -DOPENSSL_CPUID_OBJ -DOPENSSL_IA32_SSE2 -DOPENSSL_BN_ASM_MONT -DOPENSSL_BN_ASM_MONT5 -DOPENSSL_BN_ASM_GF2m -DSHA1_ASM -DSHA256_ASM -DSHA512_ASM -DKECCAK1600_ASM -DRC4_ASM -DMD5_ASM -DAESNI_ASM -DVPAES_ASM -DGHASH_ASM -DECP_NISTZ256_ASM -DX25519_ASM -DPOLY1305_ASM
+    OPENSSLDIR: "C:\Program Files\Common Files\SSL"
+    ENGINESDIR: "C:\Program Files\OpenSSL-1_1\lib\engines-1_1"
+    Seeding source: os-specific
     ```
-
+  * Please verify that the version of openssl corresponds with the
+    Platform/Configuration chosen. Specifically, ensure that the
+    platform reported by openssl corresponds with that chosen in
+    VS. For e.g. x64 in VS should correspond to VC-WIN64A reported by
+    openssl and x86 corresponds to VC-WIN32. Sometimes, it might not
+    because libcrypto-1_1.lib is not recompiled. Force it to recompile
+    by doing a rebuild all or more specifically, rebuild this project.
+    
 ## Note ##
 
   * As the original project evolves, there is a possibility that these
 project files can get out of date, specifically when files are
 added/deleted. Usually, this can be easily fixed by examining the
 errors when compiling.
-  * Differences from openssl1_1: 
+  * Differences from [Kelvin Lee](https://github.com/kiyolee)'s [openssl1_1](https://github.com/kiyolee/openssl1_1-win-build): 
       * My philosophy was to create a project that would deliver just the VS solution/project files and allow people to fetch from github the version of openssl that they wanted to compile (and keep that up-to-date) separately. 
       * Kelvin delivers both the openssl code and the project files as a package.
       * I use references (including to zlib) and to the internally generated libraries instead of specifying them in the input area of linking. 

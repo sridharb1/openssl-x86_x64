@@ -188,6 +188,9 @@
     <ClCompile Include="..\..\ms\applink.c" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\zlib\contrib\vstudio\vc14\zlibstat.vcxproj">
+      <Project>{745dec58-ebb3-47a9-a9b8-4c6627c01bf8}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\libapps\libapps.vcxproj">
       <Project>{d170f81b-97da-4313-a52a-640c17502b9d}</Project>
     </ProjectReference>
