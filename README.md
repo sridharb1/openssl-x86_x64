@@ -18,7 +18,7 @@ I used Visual Studio 2019 Community Edition.
 
 # Installation #
 
-  * git clone [OpenSSL, tested w/ v1.1.1j-DEV](https://github.com/openssl/openssl) into a local folder. I switched the branch to the latest in the v1.1.1 branch.
+  * git clone [OpenSSL, tested w/ v1.1.1m-DEV](https://github.com/openssl/openssl) into a local folder. I switched the branch to the latest in the v1.1.1 branch.
   * git clone [openssl-x86_x64](https://github.com/sridharb1/openssl-x86_x64) into another folder. 
   * Copy the contents of the build folder of openssl-x86_x64 into the openssl tree.
   * This depends on the statically compiled [zlib, tested w/ v1.2.11](https://github.com/madler/zlib).
@@ -28,7 +28,7 @@ I used Visual Studio 2019 Community Edition.
     x64/Release) and compile.
   * `openssl version -a`
     ``` shell
-    OpenSSL 1.1.1j  16 Feb 2021
+    OpenSSL 1.1.1m-dev  xx XXX xxxx
     built on: Mon Mar  9 13:34:30 2020 UTC
     platform: VC-WIN64A
     options:  bn(64,64) rc4(8x,int) des(long) idea(int) blowfish(ptr)
