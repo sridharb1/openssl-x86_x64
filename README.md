@@ -14,13 +14,13 @@ can be used to compile openssl on Windows. This was heavily based on
 work done by [Kelvin Lee](https://github.com/kiyolee) found at
 [openssl1_1](https://github.com/kiyolee/openssl1_1-win-build).
 
-I used Visual Studio 2019 Community Edition.
+I used Visual Studio 2022 Community Edition.
 
 # Installation #
 
-  * git clone [OpenSSL, tested w/ v1.1.1m-DEV](https://github.com/openssl/openssl) into a local folder. I switched the branch to the latest in the v1.1.1 branch.
+  * git clone [OpenSSL, tested w/ v1.1.1t-DEV](https://github.com/openssl/openssl) into a local folder. I switched the branch to the latest in the v1.1.1 branch.
   * git clone [openssl-x86_x64](https://github.com/sridharb1/openssl-x86_x64) into another folder. 
-  * Copy the contents of the build folder of openssl-x86_x64 into the openssl tree.
+  * Copy the build folder of openssl-x86_x64 into the openssl tree. Thus, there should be a new folder called build in the openssl source tree that you downloaded in the first step.
   * This depends on the statically compiled [zlib, tested w/ v1.2.11](https://github.com/madler/zlib).
   * Use my [zlib-x86_x64](https://github.com/sridharb1/zlib-x86_x64)
     to compile on Windows. See instructions in that repository.
@@ -28,11 +28,11 @@ I used Visual Studio 2019 Community Edition.
     x64/Release) and compile.
   * `openssl version -a`
     ``` shell
-    OpenSSL 1.1.1m-dev  xx XXX xxxx
-    built on: Mon Mar  9 13:34:30 2020 UTC
+    OpenSSL 1.1.1t-dev  xx XXX xxxx
+    built on: Fri Jan  6 05:00:18 2023 UTC
     platform: VC-WIN64A
     options:  bn(64,64) rc4(8x,int) des(long) idea(int) blowfish(ptr)
-    compiler: cl /Zi /Fdossl_static.pdb /MT /Zl /Gs0 /GF /Gy /W3 /wd4090 /nologo /O2 -DL_ENDIAN -DOPENSSL_PIC -DOPENSSL_CPUID_OBJ -DOPENSSL_IA32_SSE2 -DOPENSSL_BN_ASM_MONT -DOPENSSL_BN_ASM_MONT5 -DOPENSSL_BN_ASM_GF2m -DSHA1_ASM -DSHA256_ASM -DSHA512_ASM -DKECCAK1600_ASM -DRC4_ASM -DMD5_ASM -DAESNI_ASM -DVPAES_ASM -DGHASH_ASM -DECP_NISTZ256_ASM -DX25519_ASM -DPOLY1305_ASM
+    compiler: cl /Zi /Fdossl_static.pdb /Gs0 /GF /Gy /MD /W3 /wd4090 /nologo /O2 -DL_ENDIAN -DOPENSSL_PIC -DOPENSSL_CPUID_OBJ -DOPENSSL_IA32_SSE2 -DOPENSSL_BN_ASM_MONT -DOPENSSL_BN_ASM_MONT5 -DOPENSSL_BN_ASM_GF2m -DSHA1_ASM -DSHA256_ASM -DSHA512_ASM -DKECCAK1600_ASM -DRC4_ASM -DMD5_ASM -DAESNI_ASM -DVPAES_ASM -DGHASH_ASM -DECP_NISTZ256_ASM -DX25519_ASM -DPOLY1305_ASM
     OPENSSLDIR: "C:\Program Files\Common Files\SSL"
     ENGINESDIR: "C:\Program Files\OpenSSL-1_1\lib\engines-1_1"
     Seeding source: os-specific
@@ -47,6 +47,7 @@ I used Visual Studio 2019 Community Edition.
     
 ## Note ##
 
+  * The normal openssl prerequisites for Windows include perl (I use Strawberry Perl) and NASM. I have used the latest availablexs versions of these
   * As the original project evolves, there is a possibility that these
 project files can get out of date, specifically when files are
 added/deleted. Usually, this can be easily fixed by examining the
