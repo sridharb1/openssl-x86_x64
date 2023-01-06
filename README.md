@@ -21,7 +21,7 @@ I used Visual Studio 2022 Community Edition.
   * git clone [OpenSSL, tested w/ v1.1.1t-DEV](https://github.com/openssl/openssl) into a local folder. I switched the branch to the latest in the v1.1.1 branch.
   * git clone [openssl-x86_x64](https://github.com/sridharb1/openssl-x86_x64) into another folder. 
   * Copy the build folder of openssl-x86_x64 into the openssl tree. Thus, there should be a new folder called build in the openssl source tree that you downloaded in the first step.
-  * This depends on the statically compiled [zlib, tested w/ v1.2.11](https://github.com/madler/zlib).
+  * This depends on the statically compiled [zlib, tested w/ v1.2.13](https://github.com/madler/zlib).
   * Use my [zlib-x86_x64](https://github.com/sridharb1/zlib-x86_x64)
     to compile on Windows. See instructions in that repository.
   * Open the openssl1_1.sln in Visual Studio. Select the platform/configuration (like
